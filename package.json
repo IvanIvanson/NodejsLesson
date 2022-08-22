@@ -1,14 +1,29 @@
 {
-  "dependencies": {
-    "ansi": "*",
-    "beepbeep": "^1.3.0",
-    "colors": "^1.4.0"
-  },
+  "name": "nodejspractika",
+  "version": "1.0.0",
+  "description": "nodejs practika",
+  "main": "index.js",
   "scripts": {
-    "dev": "node hello-npm.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node cli.js"
+  },
+  "bin": {
+    "reader": "cli.js"
+  },
+  "keywords": [
+    "node",
+    "nodejs"
+  ],
+  "author": "Ivan Ghalut <ghalut@mail.ru>",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "colors": "^1.4.0",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "inquirer": "^8.0.0",
+    "yargs": "^17.5.1"
   },
   "devDependencies": {
-    "eslint": "^8.21.0"
+    "nodemon": "^2.0.19"
   }
 }
