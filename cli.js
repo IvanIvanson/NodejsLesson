@@ -2,7 +2,26 @@
 const fs = require("fs");
 const path = require("path");
 const inquirer = require("inquirer");
+const express = require('express');
+const app = express();
 
+// ----------
+app.set('view engine', 'ejs')
+app.set('views', './templates');
+
+app.use(express.static('public'));
+
+app.get('/', (req, res) => {
+    res.render("index", { folders: list, port: port });
+});
+
+
+
+let port = 3001;
+app.listen(port, () => {
+    console.log(`сервер запущен: http://localhost:${port}`)
+})
+// ---------
 const currentDirectory = process.cwd();
 const isFile = (fileName) => {
   return fs.lstatSync(fileName).isFile();
